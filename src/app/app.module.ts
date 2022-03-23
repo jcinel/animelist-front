@@ -7,21 +7,25 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import {MatButtonModule} from '@angular/material/button';
-import { AnimesComponent } from './modules/animes/animes.component';
+import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
 import { AnimesService } from './services/animes.service';
+import { FormsModule } from '@angular/forms';
+import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AnimesComponent
+    ListarAnimesComponent,
+    CriarAnimesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClientModule, AnimesService],
   bootstrap: [AppComponent]

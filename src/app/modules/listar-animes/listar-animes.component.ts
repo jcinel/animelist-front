@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Anime } from 'src/app/interfaces/anime';
+import { Anime } from '../../interfaces/anime';
 import { AnimesService } from '../../services/animes.service';
 
 @Component({
   selector: 'app-animes',
-  templateUrl: './animes.component.html',
-  styleUrls: ['./animes.component.css']
+  templateUrl: './listar-animes.component.html',
+  styleUrls: ['./listar-animes.component.css']
 })
-export class AnimesComponent implements OnInit {
+export class ListarAnimesComponent implements OnInit {
 
   animes: Array<Anime> = new Array();
 

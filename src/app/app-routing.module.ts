@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AnimesComponent } from './modules/animes/animes.component';
+import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
+import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
 import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: AnimesComponent
-  }
+  { path: ' ', component: HomeComponent },
+  { path: 'animes/post', component: CriarAnimesComponent },
+  { path: 'animes/get', component: ListarAnimesComponent }
 ];
 
 @NgModule({
