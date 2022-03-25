@@ -11,13 +11,15 @@ import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.com
 import { AnimesService } from './services/animes.service';
 import { FormsModule } from '@angular/forms';
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
+import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ListarAnimesComponent,
-    CriarAnimesComponent
+    CriarAnimesComponent,
+    DetalharAnimesComponent
   ],
   imports: [
     BrowserModule,
