@@ -11,6 +11,10 @@ export class ListarAnimesComponent implements OnInit {
 
   animes: Array<Anime> = new Array();
 
+  displayDetails: boolean = false;
+
+  displayId: number = -1;
+
   constructor(private animesService: AnimesService) { }
 
   ngOnInit(): void {
@@ -26,5 +30,10 @@ export class ListarAnimesComponent implements OnInit {
         console.log('Erro ao listar os animes', err);
       }
     })
+  }
+
+  mostrarDetalhes(id: number){
+    this.displayId = id;
+    this.displayDetails = true;
   }
 }

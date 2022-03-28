@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Anime } from 'src/app/interfaces/anime';
 import { AnimesService } from 'src/app/services/animes.service';
 
@@ -7,7 +7,7 @@ import { AnimesService } from 'src/app/services/animes.service';
   templateUrl: './detalhar-animes.component.html',
   styleUrls: ['./detalhar-animes.component.css']
 })
-export class DetalharAnimesComponent implements OnInit {
+export class DetalharAnimesComponent implements OnInit, OnChanges {
   
   anime: Anime = {
     id: -1,
@@ -15,11 +15,16 @@ export class DetalharAnimesComponent implements OnInit {
     autor: ''
   };
 
+  @Input()
+  id: number = -1;
+
   constructor(private animesService: AnimesService) { }
 
-  ngOnInit(): void {
-    this.detalharAnimes(22);
+  ngOnChanges(changes: SimpleChanges): void {
+    this.detalharAnimes(this.id);
   }
+
+  ngOnInit(): void { }
 
   detalharAnimes(id: number){
     this.animesService.detalharAnimes(id).subscribe({

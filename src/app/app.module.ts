@@ -12,6 +12,9 @@ import { AnimesService } from './services/animes.service';
 import { FormsModule } from '@angular/forms';
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
+import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
+import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
+import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-anim
     HomeComponent,
     ListarAnimesComponent,
     CriarAnimesComponent,
-    DetalharAnimesComponent
+    DetalharAnimesComponent,
+    CriarUsuariosComponent,
+    ListarUsuariosComponent,
+    DetalharUsuariosComponent
   ],
   imports: [
     BrowserModule,

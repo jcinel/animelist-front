@@ -9,5 +9,10 @@
     <tr *ngFor="let anime of animes">
         <td>{{anime.nome}}</td>
         <td>{{anime.autor}}</td>
+        <td><button (click)="mostrarDetalhes(anime.id)">Detalhes</button></td>
     </tr>
 </table>
+
+<div *ngIf="displayDetails">
+    <app-detalhar-animes [id] = "displayId"></app-detalhar-animes>
+</div>
