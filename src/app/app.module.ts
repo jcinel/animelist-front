@@ -15,6 +15,7 @@ import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-anim
 import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
 import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
 import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-usuarios.component';
+import { UsuariosService } from './services/usuarios.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpClientModule, AnimesService],
+  providers: [HttpClientModule, AnimesService, UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

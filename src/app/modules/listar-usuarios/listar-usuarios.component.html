@@ -1,1 +1,13 @@
-<p>listar-usuarios works!</p>
+<table>
+    <tr>
+        <th>nome</th>
+        <th>dataNasc</th>
+        <th>email</th>
+    </tr>
+
+    <tr *ngFor="let usuario of usuarios">
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.dataNasc}}</td>
+        <td>{{usuario.email}}</td>
+    </tr>
+</table>
