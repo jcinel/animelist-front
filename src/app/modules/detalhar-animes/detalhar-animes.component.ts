@@ -36,26 +36,4 @@ export class DetalharAnimesComponent implements OnInit, OnChanges {
       }
     })
   }
-
-  atualizarAnime(id: number){
-    this.animesService.atualizarAnime(id, this.anime).subscribe({
-      next: anime => {
-        alert('Anime atualizado com sucesso');
-      },
-      error: err => {
-        console.log('Erro ao atualizar anime', err);
-      }
-    })
-  }
-
-  deletarAnime(id: number){
-    this.animesService.deletarAnime(id).subscribe({
-      next: _ => {
-        alert('Anime deletado com sucesso');
-      },
-      error: err => {
-        console.log('Erro ao deletar anime', err);
-      }
-    })
-  }
 }

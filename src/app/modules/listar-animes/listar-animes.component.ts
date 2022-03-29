@@ -13,6 +13,8 @@ export class ListarAnimesComponent implements OnInit {
 
   displayDetails: boolean = false;
 
+  displayEdit: boolean = false;
+
   displayId: number = -1;
 
   constructor(private animesService: AnimesService) { }
@@ -35,5 +37,12 @@ export class ListarAnimesComponent implements OnInit {
   mostrarDetalhes(id: number){
     this.displayId = id;
     this.displayDetails = true;
+    this.displayEdit = false;
+  }
+
+  mostrarAtualizar(id: number){
+    this.displayId = id;
+    this.displayDetails = false;
+    this.displayEdit = true;
   }
 }

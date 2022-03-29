@@ -10,9 +10,14 @@
         <td>{{anime.nome}}</td>
         <td>{{anime.autor}}</td>
         <td><button (click)="mostrarDetalhes(anime.id)">Detalhes</button></td>
+        <td><button (click)="mostrarAtualizar(anime.id)">Editar</button></td>
     </tr>
 </table>
 
 <div *ngIf="displayDetails">
     <app-detalhar-animes [id] = "displayId"></app-detalhar-animes>
+</div>
+
+<div *ngIf="displayEdit">
+    <app-atualizar-animes [id] = "displayId"></app-atualizar-animes>
 </div>

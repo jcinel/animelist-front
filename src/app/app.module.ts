@@ -16,6 +16,10 @@ import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.
 import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
 import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-usuarios.component';
 import { UsuariosService } from './services/usuarios.service';
+import { AtualizarAnimesComponent } from './modules/atualizar-animes/atualizar-animes.component';
+import { DeletarAnimesComponent } from './modules/deletar-animes/deletar-animes.component';
+import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualizar-usuarios.component';
+import { DeletarUsuariosComponent } from './modules/deletar-usuarios/deletar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { UsuariosService } from './services/usuarios.service';
     DetalharAnimesComponent,
     CriarUsuariosComponent,
     ListarUsuariosComponent,
-    DetalharUsuariosComponent
+    DetalharUsuariosComponent,
+    AtualizarAnimesComponent,
+    DeletarAnimesComponent,
+    AtualizarUsuariosComponent,
+    DeletarUsuariosComponent
   ],
   imports: [
     BrowserModule,
