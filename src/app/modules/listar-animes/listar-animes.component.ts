@@ -17,6 +17,10 @@ export class ListarAnimesComponent implements OnInit {
 
   displayId: number = -1;
 
+  page: number = 0;
+
+  pageMax: number = 1000;
+
   constructor(private animesService: AnimesService) { }
 
   ngOnInit(): void {
@@ -24,9 +28,10 @@ export class ListarAnimesComponent implements OnInit {
   }
 
   listarAnimes(){
-    this.animesService.listarAnimes().subscribe({
+    this.animesService.listarAnimes(this.page, 2).subscribe({
       next: animesResponse => {
         this.animes = animesResponse.content;
+        this.pageMax = animesResponse.totalPages;
       },
       error: err => {
         console.log('Erro ao listar os animes', err);
@@ -44,5 +49,19 @@ export class ListarAnimesComponent implements OnInit {
     this.displayId = id;
     this.displayDetails = false;
     this.displayEdit = true;
+  }
+  
+  proximaPagina(){
+    if (this.page < this.pageMax - 1) {
+      this.page = this.page + 1;
+    }
+    this.listarAnimes();
+  }
+
+  paginaAnterior(){
+    if (this.page > 0) {
+      this.page = this.page - 1;
+    }
+    this.listarAnimes();
   }
 }

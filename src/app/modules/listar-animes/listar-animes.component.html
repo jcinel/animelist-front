@@ -1,18 +1,25 @@
 <h2>Animes adicionados recentemente</h2>
 
-<table>
-    <tr>
-        <th>nome</th>
-        <th>autor</th>
-    </tr>
+<div>
+    <table>
+        <tr>
+            <th>nome</th>
+            <th>autor</th>
+        </tr>
+    
+        <tr *ngFor="let anime of animes">
+            <td>{{anime.nome}}</td>
+            <td>{{anime.autor}}</td>
+            <td><button (click)="mostrarDetalhes(anime.id)">Detalhes</button></td>
+            <td><button (click)="mostrarAtualizar(anime.id)">Editar</button></td>
+        </tr>
+    </table>
+</div>
 
-    <tr *ngFor="let anime of animes">
-        <td>{{anime.nome}}</td>
-        <td>{{anime.autor}}</td>
-        <td><button (click)="mostrarDetalhes(anime.id)">Detalhes</button></td>
-        <td><button (click)="mostrarAtualizar(anime.id)">Editar</button></td>
-    </tr>
-</table>
+<div>
+    <button (click)="paginaAnterior()">Página anterior</button>
+    <button (click)="proximaPagina()">Próxima página</button>
+</div>
 
 <div *ngIf="displayDetails">
     <app-detalhar-animes [id] = "displayId"></app-detalhar-animes>
@@ -21,3 +28,4 @@
 <div *ngIf="displayEdit">
     <app-atualizar-animes [id] = "displayId"></app-atualizar-animes>
 </div>
+

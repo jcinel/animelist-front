@@ -20,6 +20,8 @@ export class DeletarAnimesComponent implements OnInit {
     this.animesService.deletarAnime(this.id).subscribe({
       next: _ => {
         alert('Anime deletado com sucesso');
+        window.location.reload();
+
       },
       error: err => {
         console.log('Erro ao deletar anime', err);
