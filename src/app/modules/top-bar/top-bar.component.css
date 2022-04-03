@@ -1,0 +1,16 @@
+.topbar {
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 1rem;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

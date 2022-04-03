@@ -1,3 +1,5 @@
+<app-top-bar></app-top-bar>
+
 <h2>Animes adicionados recentemente</h2>
 
 <div>
@@ -10,15 +12,19 @@
         <tr *ngFor="let anime of animes">
             <td>{{anime.nome}}</td>
             <td>{{anime.autor}}</td>
-            <td><button (click)="mostrarDetalhes(anime.id)">Detalhes</button></td>
-            <td><button (click)="mostrarAtualizar(anime.id)">Editar</button></td>
+            <td><button mat-icon-button color="primary" aria-label="Detalhar" (click)="mostrarDetalhes(anime.id)">
+                <mat-icon>list</mat-icon>
+            </button></td>
+            <td><button mat-icon-button color="primary" aria-label="Editar" (click)="mostrarAtualizar(anime.id)">
+                <mat-icon>edit</mat-icon>
+            </button></td>
         </tr>
     </table>
 </div>
 
 <div>
-    <button (click)="paginaAnterior()">Página anterior</button>
-    <button (click)="proximaPagina()">Próxima página</button>
+    <button mat-button (click)="paginaAnterior()">Página anterior</button>
+    <button mat-button (click)="proximaPagina()">Próxima página</button>
 </div>
 
 <div *ngIf="displayDetails">

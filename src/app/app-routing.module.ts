@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
 import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
-import { HomeComponent } from './views/home/home.component';
+import { HomeComponent } from './modules/home/home.component';
 import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
 import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
 import { AtualizarAnimesComponent } from './modules/atualizar-animes/atualizar-animes.component';

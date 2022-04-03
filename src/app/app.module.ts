@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './views/home/home.component';
-import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './modules/home/home.component';
+import { MatButtonModule } from '@angular/material/button';
 import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
 import { AnimesService } from './services/animes.service';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +19,9 @@ import { AtualizarAnimesComponent } from './modules/atualizar-animes/atualizar-a
 import { DeletarAnimesComponent } from './modules/deletar-animes/deletar-animes.component';
 import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualizar-usuarios.component';
 import { DeletarUsuariosComponent } from './modules/deletar-usuarios/deletar-usuarios.component';
+import { TopBarComponent } from './modules/top-bar/top-bar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { DeletarUsuariosComponent } from './modules/deletar-usuarios/deletar-usu
     AtualizarAnimesComponent,
     DeletarAnimesComponent,
     AtualizarUsuariosComponent,
-    DeletarUsuariosComponent
+    DeletarUsuariosComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,9 @@ import { DeletarUsuariosComponent } from './modules/deletar-usuarios/deletar-usu
     BrowserAnimationsModule,
     MatButtonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [HttpClientModule, AnimesService, UsuariosService],
   bootstrap: [AppComponent]
