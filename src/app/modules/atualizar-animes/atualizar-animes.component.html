@@ -4,4 +4,5 @@
     <p>Nome: <input type="text" name="name" placeholder="{{anime.nome}}" [(ngModel)]="anime.nome"/></p>
     <p>Autor: <input type="text" name="autor" placeholder="{{anime.autor}}" [(ngModel)]="anime.autor"/></p>
     <button type="button" (click)="atualizarAnime()">Atualizar anime</button>
+    <app-deletar-animes [id] = "anime.id"></app-deletar-animes>
 </form>

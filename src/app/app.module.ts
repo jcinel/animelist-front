@@ -21,7 +21,8 @@ import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualiz
 import { DeletarUsuariosComponent } from './modules/deletar-usuarios/deletar-usuarios.component';
 import { TopBarComponent } from './modules/top-bar/top-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     FormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   providers: [HttpClientModule, AnimesService, UsuariosService],
   bootstrap: [AppComponent]

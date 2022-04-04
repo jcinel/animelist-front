@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Anime } from '../../interfaces/anime';
 import { AnimesService } from '../../services/animes.service';
 
@@ -7,7 +7,7 @@ import { AnimesService } from '../../services/animes.service';
   templateUrl: './atualizar-animes.component.html',
   styleUrls: ['./atualizar-animes.component.css']
 })
-export class AtualizarAnimesComponent implements OnInit {
+export class AtualizarAnimesComponent implements OnInit, OnChanges {
 
   anime: Anime = {
     id: -1,
@@ -20,7 +20,15 @@ export class AtualizarAnimesComponent implements OnInit {
 
   constructor(private animesService: AnimesService) { }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.detalharAnime();
+  }
+
   ngOnInit(): void {
+    
+  }
+
+  detalharAnime(){
     this.animesService.detalharAnimes(this.id).subscribe({
       next: anime => {
         this.anime = anime;

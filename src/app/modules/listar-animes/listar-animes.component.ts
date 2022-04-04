@@ -21,6 +21,8 @@ export class ListarAnimesComponent implements OnInit {
 
   pageMax: number = 1000;
 
+  displayedColumns: string[] = ['nome', 'autor', 'detalhar', 'editar'];
+
   constructor(private animesService: AnimesService) { }
 
   ngOnInit(): void {
