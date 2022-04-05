@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AtualizarAnimesComponent } from './modules/atualizar-animes/atualizar-animes.component';
+import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualizar-usuarios.component';
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
 import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'animes/detalhar', component: DetalharAnimesComponent },
   { path: 'animes/atualizar', component: AtualizarAnimesComponent },
   { path: 'usuarios/criar', component: CriarUsuariosComponent },
-  { path: 'usuarios/listar', component: ListarUsuariosComponent }
+  { path: 'usuarios/listar', component: ListarUsuariosComponent },
+  { path: 'usuarios/atualizar', component: AtualizarUsuariosComponent }
 ];
 
 @NgModule({

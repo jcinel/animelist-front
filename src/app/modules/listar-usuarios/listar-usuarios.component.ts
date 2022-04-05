@@ -11,6 +11,10 @@ export class ListarUsuariosComponent implements OnInit {
 
   usuarios: Array<Usuario> = new Array();
 
+  page: number = 0;
+
+  pageMax: number = 1000;
+
   constructor(private usuariosService: UsuariosService) { }
 
   ngOnInit(): void {
@@ -26,6 +30,20 @@ export class ListarUsuariosComponent implements OnInit {
         console.log('Erro ao listar os usuários', err);
       }
     })
+  }
+
+  proximaPagina(){
+    if (this.page < this.pageMax - 1) {
+      this.page = this.page + 1;
+    }
+    this.listarUsuarios();
+  }
+
+  paginaAnterior(){
+    if (this.page > 0) {
+      this.page = this.page - 1;
+    }
+    this.listarUsuarios();
   }
 
 }

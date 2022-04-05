@@ -12,4 +12,8 @@ export class DetalharUsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  detalharUsuarios(id: number){
+    
+  }
+
 }
