@@ -30,7 +30,7 @@ export class ListarAnimesComponent implements OnInit {
   }
 
   listarAnimes(){
-    this.animesService.listarAnimes(this.page, 2).subscribe({
+    this.animesService.listarAnimes(this.page, 10).subscribe({
       next: animesResponse => {
         this.animes = animesResponse.content;
         this.pageMax = animesResponse.totalPages;
