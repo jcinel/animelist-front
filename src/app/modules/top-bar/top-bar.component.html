@@ -1,6 +1,8 @@
 <mat-toolbar color="primary" class="topbar">
   <div>Animelist</div>
   <div>
+    <button *ngIf="displayAddAnime" (click)="paginaAnimesCriar()">Criar</button>
+    <button *ngIf="displayAddUsuario" (click)="paginaUsuariosCriar()">Criar</button>
     <button (click)="paginaHome()">Home</button>
     <button (click)="paginaAnimes()">Animes</button>
     <button (click)="paginaUsuarios()">Usuários</button>
