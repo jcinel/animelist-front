@@ -1,9 +1,12 @@
 <app-top-bar></app-top-bar>
 
-<h2>Cadastrar anime:</h2>
+<div>
+    <h2>Cadastrar anime:</h2>
 
-<form>
-    <p>Nome: <input type="text" name="name" [(ngModel)]="anime.nome"/></p>
-    <p>Autor: <input type="text" name="autor" [(ngModel)]="anime.autor"/></p>
-    <button type="button" (click)="criarAnime()">Criar anime</button>
-</form>
+    <form>
+        <p>Nome: <input type="text" name="name" [(ngModel)]="anime.nome"/></p>
+        <p>Autor: <input type="text" name="autor" [(ngModel)]="anime.autor"/></p>
+        <button type="button" (click)="criarAnime()">Criar anime</button>
+    </form>
+</div>
+
