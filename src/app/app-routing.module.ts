@@ -6,6 +6,7 @@ import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualiz
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
 import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
+import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-usuarios.component';
 import { HomeComponent } from './modules/home/home.component';
 import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
 import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'animes/atualizar', component: AtualizarAnimesComponent },
   { path: 'usuarios/criar', component: CriarUsuariosComponent },
   { path: 'usuarios/listar', component: ListarUsuariosComponent },
+  { path: 'usuarios/detalhar', component: DetalharUsuariosComponent },
   { path: 'usuarios/atualizar', component: AtualizarUsuariosComponent }
 ];
 

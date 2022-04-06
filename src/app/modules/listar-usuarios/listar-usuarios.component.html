@@ -1,15 +1,57 @@
 <app-top-bar></app-top-bar>
 
-<table>
-    <tr>
-        <th>nome</th>
-        <th>dataNasc</th>
-        <th>email</th>
-    </tr>
+<div>
+    <table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="nome">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="nascimento">
+          <th mat-header-cell *matHeaderCellDef> Nascimento </th>
+          <td mat-cell *matCellDef="let element"> {{element.dataNasc}} </td>
+        </ng-container>
 
-    <tr *ngFor="let usuario of usuarios">
-        <td>{{usuario.nome}}</td>
-        <td>{{usuario.dataNasc}}</td>
-        <td>{{usuario.email}}</td>
-    </tr>
-</table>
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> E-mail </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+        <ng-container matColumnDef="detalhar">
+            <th mat-header-cell *matHeaderCellDef> Detalhes </th>
+            <td mat-cell *matCellDef="let element"> 
+              <button mat-icon-button color="primary" aria-label="Detalhar" (click)="mostrarDetalhes(element.id)">
+                  <mat-icon>list</mat-icon>
+              </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="editar">
+            <th mat-header-cell *matHeaderCellDef> Editar </th>
+            <td mat-cell *matCellDef="let element"> 
+              <button mat-icon-button color="primary" aria-label="Editar" (click)="mostrarAtualizar(element.id)">
+                  <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+        </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
+
+<div *ngIf="displayDetails">
+    <app-detalhar-usuarios [id] = "displayId"></app-detalhar-usuarios>
+</div>
+
+<div *ngIf="displayEdit">
+    <app-atualizar-usuarios [id] = "displayId"></app-atualizar-usuarios>
+</div>
+
+<div class="container">
+  <button mat-button (click)="paginaAnterior()">Página anterior</button>
+  <button mat-button (click)="proximaPagina()">Próxima página</button>
+</div>

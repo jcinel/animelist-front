@@ -13,18 +13,22 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
   criarUsuario(usuario: CriarUsuario): Observable<any> {
-    return this.http.post("http://localhost:8080/api/usuarios", usuario);
+    return this.http.post("http://localhost:8080/api/users", usuario);
   }
 
   listarUsuarios(page: number = 0, size: number = 10) : Observable<UsuarioResponse> {
-    return this.http.get<UsuarioResponse>(`http://localhost:8080/api/usuarios?sort=id&page=${page}&size=${size}`);
+    return this.http.get<UsuarioResponse>(`http://localhost:8080/api/users?sort=id&page=${page}&size=${size}`);
+  }
+
+  detalharUsuarios(id: any) : Observable<any>{
+    return this.http.get("http://localhost:8080/api/users/".concat(id));
   }
 
   atualizarUsuario(id: any, usuario: Usuario) : Observable<any> {
-    return this.http.put("http://localhost:8080/api/usuarios/".concat(id), usuario);
+    return this.http.put("http://localhost:8080/api/users/".concat(id), usuario);
   } 
 
   deletarUsuario(id: any) : Observable<any> {
-    return this.http.delete("http://localhost:8080/api/usuarios/".concat(id), {responseType: 'text'});
+    return this.http.delete("http://localhost:8080/api/users/".concat(id), {responseType: 'text'});
   }
 }

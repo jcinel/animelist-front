@@ -24,6 +24,10 @@ import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuari
 import { TopBarComponent } from './modules/top-bar/top-bar.component';
 import { AnimesService } from './services/animes.service';
 import { UsuariosService } from './services/usuarios.service';
+import { ListarAnimelistComponent } from './modules/listar-animelist/listar-animelist.component';
+import { CriarAnimelistComponent } from './modules/criar-animelist/criar-animelist.component';
+import { AtualizarAnimelistComponent } from './modules/atualizar-animelist/atualizar-animelist.component';
+import { DeletarAnimelistComponent } from './modules/deletar-animelist/deletar-animelist.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { UsuariosService } from './services/usuarios.service';
     DeletarAnimesComponent,
     AtualizarUsuariosComponent,
     DeletarUsuariosComponent,
-    TopBarComponent
+    TopBarComponent,
+    ListarAnimelistComponent,
+    CriarAnimelistComponent,
+    AtualizarAnimelistComponent,
+    DeletarAnimelistComponent
   ],
   imports: [
     BrowserModule,

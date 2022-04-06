@@ -11,9 +11,17 @@ export class ListarUsuariosComponent implements OnInit {
 
   usuarios: Array<Usuario> = new Array();
 
+  displayDetails: boolean = false;
+
+  displayEdit: boolean = false;
+  
+  displayId: number = -1;
+
   page: number = 0;
 
   pageMax: number = 1000;
+
+  displayedColumns: string[] = ['nome', 'nascimento', 'email', 'detalhar', 'editar']
 
   constructor(private usuariosService: UsuariosService) { }
 
@@ -30,6 +38,18 @@ export class ListarUsuariosComponent implements OnInit {
         console.log('Erro ao listar os usuários', err);
       }
     })
+  }
+
+  mostrarDetalhes(id: number){
+    this.displayId = id;
+    this.displayDetails = true;
+    this.displayEdit = false;
+  }
+
+  mostrarAtualizar(id: number){
+    this.displayId = id;
+    this.displayDetails = false;
+    this.displayEdit = true;
   }
 
   proximaPagina(){
