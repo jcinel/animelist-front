@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChange } from '@angular/core';
 import { Usuario } from 'src/app/interfaces/usuario';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -16,9 +16,27 @@ export class AtualizarUsuariosComponent implements OnInit {
     email: '',
   };
 
+  @Input()
+  id: number = -1;
+
   constructor(private usuariosService: UsuariosService) { }
 
+  ngOnChanges(changes: SimpleChange): void {
+    this.detalharUsuario();
+  }
+
   ngOnInit(): void {
+  }
+
+  detalharUsuario(){
+    this.usuariosService.detalharUsuarios(this.id).subscribe({
+      next: usuario => {
+        this.usuario = usuario;
+      },
+      error: err => {
+        console.log('Erro ao encontrar o usuario', err);
+      }
+    })
   }
 
   atualizarUsuario(){
