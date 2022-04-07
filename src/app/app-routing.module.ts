@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AtualizarAnimesComponent } from './modules/atualizar-animes/atualizar-animes.component';
-import { AtualizarUsuariosComponent } from './modules/atualizar-usuarios/atualizar-usuarios.component';
 import { CriarAnimesComponent } from './modules/criar-animes/criar-animes.component';
 import { CriarUsuariosComponent } from './modules/criar-usuarios/criar-usuarios.component';
-import { DetalharAnimesComponent } from './modules/detalhar-animes/detalhar-animes.component';
-import { DetalharUsuariosComponent } from './modules/detalhar-usuarios/detalhar-usuarios.component';
 import { HomeComponent } from './modules/home/home.component';
+import { ListarAnimelistComponent } from './modules/listar-animelist/listar-animelist.component';
 import { ListarAnimesComponent } from './modules/listar-animes/listar-animes.component';
 import { ListarUsuariosComponent } from './modules/listar-usuarios/listar-usuarios.component';
 
@@ -15,12 +12,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'animes/criar', component: CriarAnimesComponent },
   { path: 'animes/listar', component: ListarAnimesComponent },
-  { path: 'animes/detalhar', component: DetalharAnimesComponent },
-  { path: 'animes/atualizar', component: AtualizarAnimesComponent },
   { path: 'usuarios/criar', component: CriarUsuariosComponent },
   { path: 'usuarios/listar', component: ListarUsuariosComponent },
-  { path: 'usuarios/detalhar', component: DetalharUsuariosComponent },
-  { path: 'usuarios/atualizar', component: AtualizarUsuariosComponent }
+  { path: 'usuarios/animelist', component: ListarAnimelistComponent }
+
 ];
 
 @NgModule({

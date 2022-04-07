@@ -21,7 +21,9 @@ export class ListarUsuariosComponent implements OnInit {
 
   pageMax: number = 1000;
 
-  displayedColumns: string[] = ['nome', 'nascimento', 'email', 'detalhar', 'editar']
+  displayAnimelist: boolean = false;
+
+  displayedColumns: string[] = ['nome', 'nascimento', 'email', 'detalhar', 'editar', 'animelist']
 
   constructor(private usuariosService: UsuariosService) { }
 
@@ -50,6 +52,11 @@ export class ListarUsuariosComponent implements OnInit {
     this.displayId = id;
     this.displayDetails = false;
     this.displayEdit = true;
+  }
+
+  mostrarAnimelist(id: number){
+    this.displayId = id;
+    this.displayAnimelist = true;
   }
 
   proximaPagina(){
