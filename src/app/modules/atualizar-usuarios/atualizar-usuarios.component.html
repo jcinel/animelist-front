@@ -2,6 +2,6 @@
     <p>Nome: <input type="text" name="name" placeholder="{{usuario.nome}}" [(ngModel)]="usuario.nome"/></p>
     <p>Nascimento: <input type="text" name="dataNasc" placeholder="{{usuario.dataNasc}}" [(ngModel)]="usuario.dataNasc"/></p>
     <p>E-mail: <input type="text" name="email" placeholder="{{usuario.email}}" [(ngModel)]="usuario.email"/></p>
-    <button type="button" (click)="atualizarUsuario()">Salvar</button>
+    <button mat-button (click)="atualizarUsuario()" color="primary">Salvar</button>
     <app-deletar-animes [id] = "usuario.id"></app-deletar-animes>
 </form>

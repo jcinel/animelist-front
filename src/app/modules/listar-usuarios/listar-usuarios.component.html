@@ -43,15 +43,15 @@
       </table>
 </div>
 
+<div class="container">
+  <button mat-button (click)="paginaAnterior()">Página anterior</button>
+  <button mat-button (click)="proximaPagina()">Próxima página</button>
+</div>
+
 <div *ngIf="displayDetails">
     <app-detalhar-usuarios [id] = "displayId"></app-detalhar-usuarios>
 </div>
 
 <div *ngIf="displayEdit">
     <app-atualizar-usuarios [id] = "displayId"></app-atualizar-usuarios>
-</div>
-
-<div class="container">
-  <button mat-button (click)="paginaAnterior()">Página anterior</button>
-  <button mat-button (click)="proximaPagina()">Próxima página</button>
 </div>
