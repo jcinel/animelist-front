@@ -1,1 +1,6 @@
-<p>atualizar-animelist works!</p>
+<form>
+    <p>Nota: <input type="text" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota"/></p>
+    <p>Status: <input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status"/></p>
+    <button mat-button (click)="atualizarAnimelist()" color="primary" >Salvar</button>
+    <app-deletar-animes [id] = "anime.id"></app-deletar-animes>
+</form>

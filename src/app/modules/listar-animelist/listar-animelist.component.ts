@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AnimeList } from 'src/app/interfaces/animeList';
 import { Anime } from '../../interfaces/anime';
 import { AnimelistService } from '../../services/animelist.service';
 
@@ -14,7 +15,13 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
 
   animes: Array<Anime> = new Array();
 
-  displayId: number = -1;
+  anime: AnimeList = {
+    id: -1,
+    nome: '',
+    autor: '',
+    nota: -1,
+    status: ''
+  }
 
   displayEdit: boolean = false;
 
@@ -40,8 +47,8 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
     })
   }
 
-  mostrarAtualizar(id: number){
-    this.displayId = id;
+  mostrarAtualizar(anime: AnimeList){
+    this.anime = anime;
     this.displayEdit = true;
   }
 }

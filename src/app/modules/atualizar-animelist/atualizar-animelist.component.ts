@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AnimeList } from 'src/app/interfaces/animeList';
+import { AnimelistService } from 'src/app/services/animelist.service';
 
 @Component({
   selector: 'app-atualizar-animelist',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtualizarAnimelistComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  usuarioId: number = -1;
+
+  @Input()
+  anime: AnimeList = {
+    id: -1,
+    nome: '',
+    autor: '',
+    nota: -1,
+    status: ''
+  };
+
+  constructor(private animelistService: AnimelistService) { }
 
   ngOnInit(): void {
   }
 
+  atualizarAnimelist(){
+    this.animelistService.atualizarAnimelist(this.usuarioId, this.anime).subscribe({
+      next: anime => {
+        alert('Anime atualizado com sucesso');
+        window.location.reload();
+      },
+      error: err => {
+        console.log('Erro ao atualizar anime', err);
+      }
+    })
+  }
 }
