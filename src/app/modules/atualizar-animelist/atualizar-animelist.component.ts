@@ -30,7 +30,6 @@ export class AtualizarAnimelistComponent implements OnInit {
     this.animelistService.atualizarAnimelist(this.usuarioId, this.anime).subscribe({
       next: anime => {
         alert('Anime atualizado com sucesso');
-        window.location.reload();
       },
       error: err => {
         console.log('Erro ao atualizar anime', err);

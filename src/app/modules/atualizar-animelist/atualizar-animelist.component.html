@@ -2,5 +2,5 @@
     <p>Nota: <input type="text" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota"/></p>
     <p>Status: <input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status"/></p>
     <button mat-button (click)="atualizarAnimelist()" color="primary" >Salvar</button>
-    <app-deletar-animes [id] = "anime.id"></app-deletar-animes>
+    <app-deletar-animelist [usuarioId] = "usuarioId" [id] = "anime.id"></app-deletar-animelist>
 </form>
