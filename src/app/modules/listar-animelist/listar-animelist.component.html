@@ -37,6 +37,14 @@
       </table>
 </div>
 
+<div class="adicionar">
+  <button mat-button color="primary" aria-label="Adicionar" (click)="mostrarCriar()">Adicionar</button>
+</div>
+
+<div *ngIf="displayCriar">
+  <app-criar-animelist [usuarioId] = "usuarioId"></app-criar-animelist>
+</div>
+
 <div *ngIf="displayEdit">
   <app-atualizar-animelist [usuarioId] = "usuarioId" [anime] = "anime"></app-atualizar-animelist>
 </div>

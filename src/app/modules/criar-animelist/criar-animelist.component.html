@@ -1,1 +1,17 @@
-<p>criar-animelist works!</p>
+<div>
+    
+    <h2>Cadastrar anime:</h2>
+
+    <form>
+        <p> Anime:
+            <select [(ngModel)]="anime.id" name="id">
+                <option *ngFor="let a of animes" value= {{a.id}}>
+                  {{a.nome}}
+                </option>
+             </select>
+        </p>
+        <p>Nota: <input type="text" name="nota" [(ngModel)]="anime.nota"/></p>
+        <p>Status: <input type="text" name="status" [(ngModel)]="anime.status"/></p>
+        <button mat-button (click)="criarAnimelist()" color="primary">Adicionar anime</button>
+    </form>
+</div>

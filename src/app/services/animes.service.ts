@@ -16,19 +16,23 @@ export class AnimesService {
     return this.http.post("http://localhost:8080/api/animes", anime);
   }
 
-  listarAnimes(page: number = 0, size: number = 10) : Observable<AnimeResponse>{
+  listarAnimes(page: number = 0, size: number = 10): Observable<AnimeResponse>{
     return this.http.get<AnimeResponse>(`http://localhost:8080/api/animes?sort=id&page=${page}&size=${size}`);
   }
 
-  detalharAnimes(id: any) : Observable<any>{
+  detalharAnimes(id: any): Observable<any>{
     return this.http.get("http://localhost:8080/api/animes/".concat(id));
   }
 
-  atualizarAnime(id: any, anime: Anime) : Observable<any>{
+  atualizarAnime(id: any, anime: Anime): Observable<any>{
     return this.http.put("http://localhost:8080/api/animes/".concat(id), anime);
   }
 
-  deletarAnime(id: any) : Observable<any>{
+  deletarAnime(id: any): Observable<any>{
     return this.http.delete("http://localhost:8080/api/animes/".concat(id), {responseType: 'text'});
+  }
+
+  listaAnimes(): Observable<AnimeResponse>{
+    return this.http.get<AnimeResponse>("http://localhost:8080/api/animes/");
   }
 }

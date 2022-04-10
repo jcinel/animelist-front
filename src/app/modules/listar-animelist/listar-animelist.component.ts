@@ -25,6 +25,8 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
 
   displayEdit: boolean = false;
 
+  displayCriar: boolean = false;
+
   displayedColumns: string[] = ['nome', 'autor', 'nota', 'status', 'editar'];
 
   constructor(private animelistService: AnimelistService) { }
@@ -43,8 +45,13 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
       },
       error: err => {
         console.log('Erro ao listar os animes', err);
+        alert("Houve um erro ao buscar a lista");
       }
     })
+  }
+
+  mostrarCriar(){
+    this.displayCriar = true;
   }
 
   mostrarAtualizar(anime: AnimeList){
