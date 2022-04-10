@@ -25,6 +25,7 @@ export class DeletarAnimesComponent implements OnInit {
       },
       error: err => {
         console.log('Erro ao deletar anime', err);
+        alert("Erro ao deletar anime");
       }
     })
   }

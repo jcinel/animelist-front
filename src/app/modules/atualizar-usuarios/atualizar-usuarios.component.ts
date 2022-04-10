@@ -14,6 +14,7 @@ export class AtualizarUsuariosComponent implements OnInit {
     nome: '',
     dataNasc: '',
     email: '',
+    senha: ''
   };
 
   @Input()

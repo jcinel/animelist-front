@@ -3,5 +3,5 @@ export interface Usuario {
     nome: string;
     dataNasc: string;
     email: string;
-    senha?: string;
+    senha: string;
 }

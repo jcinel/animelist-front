@@ -13,7 +13,8 @@ export class DetalharUsuariosComponent implements OnInit, OnChanges {
     id: -1,
     nome: '',
     dataNasc: '',
-    email: ''
+    email: '',
+    senha: ''
   }
 
   @Input()

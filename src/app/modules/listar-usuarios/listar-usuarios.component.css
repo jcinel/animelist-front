@@ -6,4 +6,7 @@ table {
     margin-top: 25pt;
 }
 
-.container { text-align: center; }
+.container { 
+    text-align: center; 
+    margin-top: 10pt;
+}

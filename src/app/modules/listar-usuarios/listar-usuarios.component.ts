@@ -46,17 +46,21 @@ export class ListarUsuariosComponent implements OnInit {
     this.displayId = id;
     this.displayDetails = true;
     this.displayEdit = false;
+    this.displayAnimelist = false;
   }
 
   mostrarAtualizar(id: number){
     this.displayId = id;
     this.displayDetails = false;
     this.displayEdit = true;
+    this.displayAnimelist = false;
   }
 
   mostrarAnimelist(id: number){
     this.displayId = id;
     this.displayAnimelist = true;
+    this.displayDetails = false;
+    this.displayEdit = false;
   }
 
   proximaPagina(){
