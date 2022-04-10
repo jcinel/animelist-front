@@ -9,7 +9,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 })
 export class CriarUsuariosComponent implements OnInit {
 
-  usuario: CriarUsuario = new CriarUsuario();
+  usuario: CriarUsuario = new CriarUsuario('', '', '', '');
 
   constructor(private usuariosService: UsuariosService) { }
 
@@ -21,9 +21,11 @@ export class CriarUsuariosComponent implements OnInit {
     this.usuariosService.criarUsuario(this.usuario).subscribe({
       next: usuario => {
         alert('Usuário criado com sucesso');
+        window.location.reload();
       },
       error: err => {
         console.log('Erro ao criar novo usuário', err);
+        alert('Este e-mail já está sendo utilizado')
       }
     })
   }

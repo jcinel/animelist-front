@@ -1,6 +1,9 @@
 export class CriarUsuario {
-    nome: string | undefined;
-    dataNasc: string | undefined;
-    email: string | undefined;
-    senha: string | undefined;
+
+    constructor(
+        public nome: string, 
+        public dataNasc: string,
+        public email: string,
+        public senha: string
+    ) {};
 }

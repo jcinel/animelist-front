@@ -28,6 +28,8 @@ import { ListarAnimelistComponent } from './modules/listar-animelist/listar-anim
 import { CriarAnimelistComponent } from './modules/criar-animelist/criar-animelist.component';
 import { AtualizarAnimelistComponent } from './modules/atualizar-animelist/atualizar-animelist.component';
 import { DeletarAnimelistComponent } from './modules/deletar-animelist/deletar-animelist.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { DeletarAnimelistComponent } from './modules/deletar-animelist/deletar-a
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [HttpClientModule, AnimesService, UsuariosService],
   bootstrap: [AppComponent]

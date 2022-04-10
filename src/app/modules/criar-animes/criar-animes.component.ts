@@ -21,9 +21,11 @@ export class CriarAnimesComponent implements OnInit {
     this.animesService.criarAnime(this.anime).subscribe({
       next: anime => {
         alert('Anime criado com sucesso');
+        window.location.reload();
       },
       error: err => {
         console.log('Erro ao criar novo anime', err);
+        alert('Erro ao criar novo anime');
       }
     })
   }

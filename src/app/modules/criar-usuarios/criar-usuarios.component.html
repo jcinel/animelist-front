@@ -4,9 +4,9 @@
     <h2>Cadastrar usuário:</h2>
 
     <form>
-        <p>Nome: <input type="text" name="name" [(ngModel)]="usuario.nome"/></p>
-        <p>DataNasc: <input type="text" name="datanasc" [(ngModel)]="usuario.dataNasc"/></p>
-        <p>Email: <input type="text" name="email" [(ngModel)]="usuario.email"/></p>
+        <p>Nome: <input matInput #input maxlength="50" placeholder="Ex. Julia" type="text" name="nome" [(ngModel)]="usuario.nome"/></p>
+        <p>Nascimento: <input matInput #input maxlength="50" placeholder="Ex. 01/01/2000" type="text" name="datanasc" [(ngModel)]="usuario.dataNasc"/></p>
+        <p> E-mail: <input matInput #input maxlength="50" placeholder="Ex. pat@example.com" type="text" name="email" [(ngModel)]="usuario.email"/></p>
         <p>Senha: <input type="text" name="senha" [(ngModel)]="usuario.senha"/></p>
         <button mat-button (click)="criarUsuario()" color="primary">Criar usuário</button>
     </form>
