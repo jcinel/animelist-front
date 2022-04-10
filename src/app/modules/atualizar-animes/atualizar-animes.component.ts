@@ -12,7 +12,8 @@ export class AtualizarAnimesComponent implements OnInit, OnChanges {
   anime: Anime = {
     id: -1,
     nome: '',
-    autor: ''
+    autor: '',
+    sinopse: ''
   };
 
   @Input()

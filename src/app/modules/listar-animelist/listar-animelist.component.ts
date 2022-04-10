@@ -13,7 +13,7 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
   @Input()
   usuarioId: number = -1;
 
-  animes: Array<Anime> = new Array();
+  animes: Array<AnimeList> = new Array();
 
   anime: AnimeList = {
     id: -1,

@@ -1,6 +1,7 @@
 <form>
     <p>Nome: <input type="text" name="name" placeholder="{{anime.nome}}" [(ngModel)]="anime.nome"/></p>
     <p>Autor: <input type="text" name="autor" placeholder="{{anime.autor}}" [(ngModel)]="anime.autor"/></p>
+    <p>Sinopse: <input type="text" name="sinopse" placeholder="{{anime.sinopse}}" [(ngModel)]="anime.sinopse"/></p>
     <button mat-button (click)="atualizarAnime()" color="primary" >Salvar</button>
     <app-deletar-animes [id] = "anime.id"></app-deletar-animes>
 </form>
