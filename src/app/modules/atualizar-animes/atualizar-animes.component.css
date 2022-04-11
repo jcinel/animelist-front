@@ -3,5 +3,16 @@ form {
     width: 700px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 5px;
+    text-align: center;
+    padding: auto;
+}
+
+.nota, .atributos {
+    text-align: center;
+    color: rgb(43, 43, 43);
+}
+
+.nota {
+    margin-top: 10pt;
 }

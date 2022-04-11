@@ -4,17 +4,13 @@
 
     <form>
         <p class="nome"> Anime:</p>
-        <p class="atributos">
-            <select [(ngModel)]="anime.id" name="id">
-                <option *ngFor="let a of animes" value= {{a.id}}>
-                    {{a.nome}}
-                </option>
-                </select>
+        <p class="atributos"> 
+            <p-dropdown class="dropdown" [options]="animes" [(ngModel)]="animeSelecionado" optionLabel="nome" [filter]="true" filterBy="nome" placeholder="Escolha seu anime" name="nome"></p-dropdown>
         </p>
         <p class="atributos">Nota:</p>
-        <p class="atributos"><input type="number" name="nota" [(ngModel)]="anime.nota"/></p>
+        <p class="atributos"><input type="number" name="nota" min="0" max="10" [(ngModel)]="anime.nota" pInputText/></p>
         <p class="atributos">Status:</p>
-        <p class="atributos"><input type="text" name="status" [(ngModel)]="anime.status"/></p>
+        <p class="atributos"><input type="text" name="status" [(ngModel)]="anime.status" pInputText/></p>
         <p class="atributos"><button mat-raised-button (click)="criarAnimelist()" color="primary">Adicionar anime</button></p>
     </form>
 </div>

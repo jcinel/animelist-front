@@ -5,3 +5,12 @@ form {
     margin-right: auto;
     margin-top: 25px;
 }
+
+.nome, .atributos {
+    text-align: center;
+    color: rgb(43, 43, 43);
+}
+
+.nome {
+    margin-top: 10pt;
+}

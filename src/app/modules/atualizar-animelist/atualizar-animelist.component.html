@@ -1,9 +1,9 @@
 <div class="animelist">
     <form>
         <p class="nota">Nota:</p>
-        <p class="atributos"><input type="text" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota"/></p>
+        <p class="atributos"><input type="number" min="0" max="10" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota" pInputText/></p>
         <p class="atributos">Status:</p>
-        <p class="atributos"><input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status"/></p>
+        <p class="atributos"><input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status" pInputText/></p>
         <p class="atributos">
             <button mat-raised-button (click)="atualizarAnimelist()" color="primary" >Salvar</button>
             <app-deletar-animelist [usuarioId] = "usuarioId" [id] = "anime.id"></app-deletar-animelist>

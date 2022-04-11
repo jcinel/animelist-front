@@ -6,11 +6,11 @@
     
         <form>
             <p class="nome">Nome:</p>
-            <p class="atributos"><input type="text" name="name" [(ngModel)]="anime.nome"/></p>
+            <p class="atributos"><input type="text" name="name" [(ngModel)]="anime.nome" pInputText/></p>
             <p class="atributos">Autor:</p>
-            <p class="atributos"><input type="text" name="autor" [(ngModel)]="anime.autor"/></p>
+            <p class="atributos"><input type="text" name="autor" [(ngModel)]="anime.autor" pInputText/></p>
             <p class="atributos">Sinopse:</p>
-            <p class="atributos"><input type="text" name="sinopse" [(ngModel)]="anime.sinopse"/></p>
+            <p class="atributos"><input type="text" name="sinopse" [(ngModel)]="anime.sinopse" pInputText/></p>
             <p class="atributos"><button mat-raised-button (click)="criarAnime()" color="primary">Criar anime</button></p>
         </form>
     </div>

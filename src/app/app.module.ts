@@ -30,6 +30,9 @@ import { AtualizarAnimelistComponent } from './modules/atualizar-animelist/atual
 import { DeletarAnimelistComponent } from './modules/deletar-animelist/deletar-animelist.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { AccordionModule } from 'primeng/accordion'; 
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    AccordionModule,
+    DropdownModule,
+    InputTextModule
   ],
   providers: [HttpClientModule, AnimesService, UsuariosService],
   bootstrap: [AppComponent]

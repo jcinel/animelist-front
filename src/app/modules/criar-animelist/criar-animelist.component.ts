@@ -18,6 +18,8 @@ export class CriarAnimelistComponent implements OnInit {
 
   animes: Array<Anime> = new Array();
 
+  animeSelecionado: Anime = {id: -1, nome: '', autor: '', sinopse: ''}
+
   constructor(
     private animelistService: AnimelistService, 
     private animesService: AnimesService
@@ -39,6 +41,7 @@ export class CriarAnimelistComponent implements OnInit {
   }
 
   criarAnimelist(){
+    this.anime.id = this.animeSelecionado.id;
     console.log(this.anime);
     this.animelistService.criarAnimelist(this.usuarioId, this.anime).subscribe({
       next: anime => {
