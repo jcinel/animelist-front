@@ -23,6 +23,8 @@ export class ListarAnimesComponent implements OnInit {
 
   displayedColumns: string[] = ['nome', 'autor', 'detalhar', 'editar'];
 
+  filtro: string = '';
+
   constructor(private animesService: AnimesService) { }
 
   ngOnInit(): void {

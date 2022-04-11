@@ -1,7 +1,16 @@
 <app-top-bar [displayAddUsuario]="true"></app-top-bar>
 
 <div class="background">
-    <table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
+
+    <div class="busca">
+      <input
+        type="search"
+        #box
+        placeholder="busca..."
+        (keyup.enter)="filtro = box.value" pInputText>
+    </div>
+
+    <table mat-table [dataSource]="usuarios | arrayFiltroUsuario : filtro" class="mat-elevation-z8">
       
         <!-- Name Column -->
         <ng-container matColumnDef="nome">

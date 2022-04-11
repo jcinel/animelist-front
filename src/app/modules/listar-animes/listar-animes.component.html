@@ -1,7 +1,15 @@
 <app-top-bar [displayAddAnime]="true"></app-top-bar>
 
 <div class="background">
-    <table mat-table [dataSource]="animes" class="mat-elevation-z8">
+    <div class="busca">
+      <input
+      type="search"
+      #box
+      placeholder="busca..."
+      (keyup.enter)="filtro = box.value" pInputText>
+    </div>
+
+    <table mat-table [dataSource]="animes | arrayFiltroAnime : filtro" class="mat-elevation-z8">
       
         <!-- Name Column -->
         <ng-container matColumnDef="nome">

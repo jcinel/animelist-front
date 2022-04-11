@@ -24,6 +24,8 @@ export class ListarUsuariosComponent implements OnInit {
   displayAnimelist: boolean = false;
 
   displayedColumns: string[] = ['nome', 'nascimento', 'email', 'detalhar', 'editar', 'animelist']
+  
+  filtro: string = '';
 
   constructor(private usuariosService: UsuariosService) { }
 

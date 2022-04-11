@@ -1,5 +1,5 @@
 .background {
-    height: 127%;
+    height: 140%;
     background-image: url("src/assets/bg.png");
     padding-top: 25pt;
 }
@@ -35,5 +35,9 @@ table {
     padding-right: 25px;
     background-color: rgb(244, 237, 237);
     opacity: 0.9;
+    text-align: center;
+}
+
+.busca {
     text-align: center;
 }

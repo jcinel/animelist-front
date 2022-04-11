@@ -33,6 +33,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { AccordionModule } from 'primeng/accordion'; 
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
+import { AnimeFiltroPipe } from './modules/listar-animes/anime.pipe';
+import { UsuarioFiltroPipe } from './modules/listar-usuarios/usuario.pipe';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { InputTextModule } from 'primeng/inputtext';
     ListarAnimelistComponent,
     CriarAnimelistComponent,
     AtualizarAnimelistComponent,
-    DeletarAnimelistComponent
+    DeletarAnimelistComponent,
+    AnimeFiltroPipe,
+    UsuarioFiltroPipe
   ],
   imports: [
     BrowserModule,
