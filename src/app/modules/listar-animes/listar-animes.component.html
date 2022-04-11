@@ -1,6 +1,6 @@
 <app-top-bar [displayAddAnime]="true"></app-top-bar>
 
-<div>
+<div class="background">
     <table mat-table [dataSource]="animes" class="mat-elevation-z8">
       
         <!-- Name Column -->
@@ -36,18 +36,21 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
+
+      <div class="container">
+        <button mat-raised-button (click)="paginaAnterior()" color="primary">Página anterior</button>
+        <button mat-raised-button (click)="proximaPagina()" color="primary">Próxima página</button>
+      </div>
+
+      <div *ngIf="displayDetails" class="displays">
+        <app-detalhar-animes [id] = "displayId"></app-detalhar-animes>
+      </div>
+    
+      <div *ngIf="displayEdit" class="displays">
+        <app-atualizar-animes [id] = "displayId"></app-atualizar-animes>
+      </div>
+
 </div>
 
-<div class="container">
-  <button mat-button (click)="paginaAnterior()">Página anterior</button>
-  <button mat-button (click)="proximaPagina()">Próxima página</button>
-</div>
 
-<div *ngIf="displayDetails">
-    <app-detalhar-animes [id] = "displayId"></app-detalhar-animes>
-</div>
-
-<div *ngIf="displayEdit">
-    <app-atualizar-animes [id] = "displayId"></app-atualizar-animes>
-</div>
 

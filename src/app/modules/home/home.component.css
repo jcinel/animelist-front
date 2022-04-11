@@ -1,0 +1,5 @@
+.background {
+    height: 100%;
+    background-image: url("src/assets/bg.png");
+    padding-top: 25pt;
+}

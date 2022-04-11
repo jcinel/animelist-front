@@ -1,6 +1,12 @@
-<form>
-    <p>Nota: <input type="text" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota"/></p>
-    <p>Status: <input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status"/></p>
-    <button mat-button (click)="atualizarAnimelist()" color="primary" >Salvar</button>
-    <app-deletar-animelist [usuarioId] = "usuarioId" [id] = "anime.id"></app-deletar-animelist>
-</form>
+<div class="animelist">
+    <form>
+        <p class="nota">Nota:</p>
+        <p class="atributos"><input type="text" name="nota" placeholder="{{anime.nota}}" [(ngModel)]="anime.nota"/></p>
+        <p class="atributos">Status:</p>
+        <p class="atributos"><input type="text" name="status" placeholder="{{anime.status}}" [(ngModel)]="anime.status"/></p>
+        <p class="atributos">
+            <button mat-raised-button (click)="atualizarAnimelist()" color="primary" >Salvar</button>
+            <app-deletar-animelist [usuarioId] = "usuarioId" [id] = "anime.id"></app-deletar-animelist>
+        </p>
+    </form>
+</div>

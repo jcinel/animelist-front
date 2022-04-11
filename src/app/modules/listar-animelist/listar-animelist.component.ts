@@ -52,10 +52,12 @@ export class ListarAnimelistComponent implements OnInit, OnChanges {
 
   mostrarCriar(){
     this.displayCriar = true;
+    this.displayEdit = false;
   }
 
   mostrarAtualizar(anime: AnimeList){
     this.anime = anime;
     this.displayEdit = true;
+    this.displayCriar = false;
   }
 }

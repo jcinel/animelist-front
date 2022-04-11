@@ -1,12 +1,36 @@
+.background {
+    height: 118%;
+    background-image: url("src/assets/bg.png");
+    padding-top: 25pt;
+}
+
 table {
     width: 50%;
     width: 700px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25pt;
+    margin-top: 5pt;
 }
 
 .container { 
     text-align: center; 
     margin-top: 10pt;
+}
+
+.container button {
+    margin-left: 2pt;
+    margin-right: 2pt;
+}
+
+.displays {
+    width: 50%;
+    width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15pt;
+    border: 2px groove rgb(251, 3, 144);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(244, 237, 237);
+    opacity: 0.9;
 }

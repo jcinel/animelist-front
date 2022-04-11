@@ -1,7 +1,21 @@
-form {
+.animelist {
     width: 50%;
-    width: 700px; 
+    width: 500px; 
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 5pt;
+    border: 2px groove rgb(251, 3, 144);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(244, 237, 237);
+    opacity: 0.9;
+}
+
+.nota, .atributos {
+    text-align: center;
+    color: rgb(43, 43, 43);
+}
+
+.nota {
+    margin-top: 10pt;
 }
