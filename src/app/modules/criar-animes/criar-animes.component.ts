@@ -9,7 +9,7 @@ import { AnimesService } from 'src/app/services/animes.service';
 })
 export class CriarAnimesComponent implements OnInit {
 
-  anime: CriarAnime = new CriarAnime();
+  anime: CriarAnime = new CriarAnime('', '', '');
 
   constructor(private animesService: AnimesService) { }
 

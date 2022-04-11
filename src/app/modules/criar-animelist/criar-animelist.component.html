@@ -10,7 +10,7 @@
                 </option>
              </select>
         </p>
-        <p>Nota: <input type="text" name="nota" [(ngModel)]="anime.nota"/></p>
+        <p>Nota: <input type="number" name="nota" [(ngModel)]="anime.nota"/></p>
         <p>Status: <input type="text" name="status" [(ngModel)]="anime.status"/></p>
         <button mat-button (click)="criarAnimelist()" color="primary">Adicionar anime</button>
     </form>

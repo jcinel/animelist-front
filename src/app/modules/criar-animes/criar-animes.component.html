@@ -1,13 +1,17 @@
 <app-top-bar></app-top-bar>
 
-<div>
-    <h2>Cadastrar anime:</h2>
-
-    <form>
-        <p>Nome: <input type="text" name="name" [(ngModel)]="anime.nome"/></p>
-        <p>Autor: <input type="text" name="autor" [(ngModel)]="anime.autor"/></p>
-        <p>Sinopse: <input type="text" name="sinopse" [(ngModel)]="anime.sinopse"/></p>
-        <button mat-button (click)="criarAnime()" color="primary">Criar anime</button>
-    </form>
+<div class="background">
+    <div class="animes">
+        <h2 class="cadastrar">Cadastrar anime:</h2>
+    
+        <form>
+            <p class="nome">Nome:</p>
+            <p class="atributos"><input type="text" name="name" [(ngModel)]="anime.nome"/></p>
+            <p class="atributos">Autor:</p>
+            <p class="atributos"><input type="text" name="autor" [(ngModel)]="anime.autor"/></p>
+            <p class="atributos">Sinopse:</p>
+            <p class="atributos"><input type="text" name="sinopse" [(ngModel)]="anime.sinopse"/></p>
+            <p class="atributos"><button mat-button (click)="criarAnime()" color="primary">Criar anime</button></p>
+        </form>
+    </div>
 </div>
-

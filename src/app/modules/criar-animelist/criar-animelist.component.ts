@@ -14,7 +14,7 @@ export class CriarAnimelistComponent implements OnInit {
   @Input()
   usuarioId: number = -1;
 
-  anime: CriarAnimelist = new CriarAnimelist();
+  anime: CriarAnimelist = new CriarAnimelist(-1, 0, '');
 
   animes: Array<Anime> = new Array();
 
@@ -47,6 +47,7 @@ export class CriarAnimelistComponent implements OnInit {
       },
       error: err => {
         console.log('Erro ao criar novo anime', err);
+        alert('Esse anime já existe na lista');
       }
     })
   }

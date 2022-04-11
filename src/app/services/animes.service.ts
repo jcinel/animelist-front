@@ -33,6 +33,8 @@ export class AnimesService {
   }
 
   listaAnimes(): Observable<AnimeResponse>{
-    return this.http.get<AnimeResponse>("http://localhost:8080/api/animes/");
+    const page = 0;
+    const size = 100;
+    return this.http.get<AnimeResponse>(`http://localhost:8080/api/animes?sort=nome&page=${page}&size=${size}`);
   }
 }

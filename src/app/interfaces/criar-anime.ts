@@ -1,5 +1,8 @@
 export class CriarAnime { 
-    nome: string | undefined;
-    autor: string | undefined;
-    sinopse: string | undefined;
+
+    constructor(
+        public nome: string,
+        public autor: string,
+        public sinopse: string
+    ) {}
 }
